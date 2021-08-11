@@ -1,7 +1,27 @@
-import '../styles/globals.css'
+import Layout from "../components/layout/layout.component";
+import { ToastProvider } from "react-toast-notifications";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	const CustomToast = ({ children }) => (
+		<div className="w-64 md:w-96 h-14 md:h-20 lg mt-20 lg:mt-40 border-2 border-primary flex justify-center items-center bg-secondary rounded-md text-lg md:text-2xl font-medium text-letters ">
+			{children}
+		</div>
+	);
+
+	return (
+		<ToastProvider
+			components={{ Toast: CustomToast }}
+			autoDismiss={true}
+			autoDismissTimeout="4000"
+			transitionDuration="500"
+			placement="top-right"
+		>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</ToastProvider>
+	);
 }
 
-export default MyApp
+export default MyApp;

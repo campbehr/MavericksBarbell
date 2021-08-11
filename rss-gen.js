@@ -1,10 +1,10 @@
-require('dotenv').config({ path: '.env.local' });
-const fs = require('fs');
-const path = require('path');
-const axios = require('axios');
+require("dotenv").config({ path: ".env.local" });
+const fs = require("fs");
+const path = require("path");
+const axios = require("axios");
 
 const getAllPostsXmlData = async () => {
-  const query = `
+	const query = `
     query AllPosts {
       posts(where: {orderby: {field: DATE, order: DESC}}) {
         edges {
@@ -20,32 +20,35 @@ const getAllPostsXmlData = async () => {
       }
     }
     `;
-  const headers = { 'Content-Type': 'application/json' };
-  const allPosts = await axios({
-    method: 'post',
-    url: process.env.WP_API_URL,
-    headers,
-    data: JSON.stringify({ query })
-  });
+	const headers = { "Content-Type": "application/json" };
+	const allPosts = await axios({
+		method: "post",
+		url: process.env.WP_API_URL,
+		headers,
+		data: JSON.stringify({ query }),
+	});
 
-  return allPosts.data.data.posts.edges;
+	return allPosts.data.data.posts.edges;
 };
 
-const blogPostsRssXml = blogPosts => {
-  let latestPostDate = '';
-  let rssItemsXml = '';
-  blogPosts.forEach(({ node }) => {
-    const post = node;
-    const postDate = Date.parse(post.date);
+const blogPostsRssXml = (blogPosts) => {
+	let latestPostDate = "";
+	let rssItemsXml = "";
+	blogPosts.forEach(({ node }) => {
+		const post = node;
+		const postDate = Date.parse(post.date);
 
-    // Remember to change this URL to your own!
-    const postHref = `https://myamazingwebsite.com/blog/${post.slug}`;
+		// Remember to change this URL to your own!
+		const postHref = `https://huntercampbellfitness.com/blog/${post.slug}`;
 
-    if (!latestPostDate || postDate > Date.parse(latestPostDate)) {
-      latestPostDate = post.date;
-    }
+		if (
+			!latestPostDate ||
+			postDate > Date.parse(latestPostDate)
+		) {
+			latestPostDate = post.date;
+		}
 
-    rssItemsXml += `
+		rssItemsXml += `
       <item>
         <title><![CDATA[ ${post.title} ]]></title>
         <link>${postHref}</link>
@@ -58,18 +61,19 @@ const blogPostsRssXml = blogPosts => {
           <![CDATA[ ${post.content} ]]>
         </content:encoded>
     </item>`;
-  });
-  return {
-    rssItemsXml,
-    latestPostDate
-  };
+	});
+	return {
+		rssItemsXml,
+		latestPostDate,
+	};
 };
 
-const getRssXml = blogPosts => {
-  const { rssItemsXml, latestPostDate } = blogPostsRssXml(blogPosts);
+const getRssXml = (blogPosts) => {
+	const { rssItemsXml, latestPostDate } =
+		blogPostsRssXml(blogPosts);
 
-  // Edit the '<link>' and '<description>' data here to reflect your own website details!
-  return `<?xml version="1.0" ?>
+	// Edit the '<link>' and '<description>' data here to reflect your own website details!
+	return `<?xml version="1.0" ?>
   <rss
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -77,10 +81,10 @@ const getRssXml = blogPosts => {
     version="2.0"
   >
     <channel>
-        <title><![CDATA[ Frontend development articles by Rob Kendal ]]></title>
-        <link>https://myamazingwebsite.com</link>
+        <title><![CDATA[ Health and fitness articles by Hunter Campbell ]]></title>
+        <link>https://huntercampbellfitness.com</link>
         <description>
-          <![CDATA[ A description about your own website that really shows off what it's all about ]]>
+          <![CDATA[ This website was built as an outlet for my unique take on health and fitness. If it helps even just one person it's done its job. ]]>
         </description>
         <language>en</language>
         <lastBuildDate>${latestPostDate}</lastBuildDate>
@@ -90,18 +94,25 @@ const getRssXml = blogPosts => {
 };
 
 async function generateRSS() {
-  const allBlogPostData = await getAllPostsXmlData();
-  const processedXml = getRssXml(allBlogPostData);
+	const allBlogPostData = await getAllPostsXmlData();
+	const processedXml = getRssXml(allBlogPostData);
 
-  const staticOutputPath = path.join(process.cwd(), 'out');
+	const staticOutputPath = path.join(
+		process.cwd(),
+		"out"
+	);
 
-  fs.writeFile(`${staticOutputPath}/rss.xml`, processedXml, err => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('File written successfully');
-    }
-  });
+	fs.writeFile(
+		`${staticOutputPath}/rss.xml`,
+		processedXml,
+		(err) => {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log("File written successfully");
+			}
+		}
+	);
 }
 
 // kick it all off

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 
-export default function Home() {
+export default function About() {
 	return (
 		<>
 			<Head>
@@ -9,8 +9,8 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="p-5">
-				<h1>Welcome to our demo blog!</h1>
+			<main>
+				<h1>About!</h1>
 				<p>
 					You can find more articles on the{" "}
 					<Link href="/blog">
