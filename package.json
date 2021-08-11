@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"deploy": "npm run build && next export && node rss-gen.js"
+		"deploy": "npm run build && next export -o _static && node rss-gen.js"
 	},
 	"dependencies": {
 		"next": "10.2.3",
