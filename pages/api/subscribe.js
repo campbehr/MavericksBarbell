@@ -50,7 +50,6 @@ export default async (req, res) => {
 	} catch (error) {
 		return res.status(400).json({
 			error: `Looks like something went wrong, if you send me your info to huntercampbellfitness@gmail.com I'll get you signed up!`,
-			data,
 		});
 	}
 };
