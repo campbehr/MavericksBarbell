@@ -29,6 +29,9 @@ module.exports = {
 				light: "#F1F1F1",
 				dark: colors.coolGray[900],
 			},
+			red: {
+				DEFAULT: colors.red[600],
+			},
 		},
 	},
 	variants: {
