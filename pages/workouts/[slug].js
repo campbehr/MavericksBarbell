@@ -59,7 +59,7 @@ export async function getStaticPaths() {
 			allPosts.edges.map(
 				({ node }) => `/workouts/${node.slug}`
 			) || [],
-		revalidate: 60,
+
 		fallback: false,
 	};
 }
