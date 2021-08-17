@@ -6,8 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"deployDO": "npm run build && next export -o _static",
-		"deployVercel": "npm run build && next export"
+		"deployStatic": "npm run build && next export -o _static",
+		"deployProd": "npm run build && start"
 	},
 	"dependencies": {
 		"axios": "^0.21.1",
