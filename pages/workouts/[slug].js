@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // data
 import {
@@ -8,6 +9,12 @@ import {
 } from "../../lib/wpGraphQL";
 
 export default function Post({ postData }) {
+	const router = useRouter();
+
+	if (router.isFallback) {
+		return <div>Loading...</div>;
+	}
+
 	if (!postData) {
 		return (
 			<p>No data could be found for the post...</p>
@@ -60,7 +67,7 @@ export async function getStaticPaths() {
 				({ node }) => `/workouts/${node.slug}`
 			) || [],
 
-		fallback: false,
+		fallback: true,
 	};
 }
 
@@ -70,7 +77,6 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			postData: data.post,
-			revalidate: 60,
 		},
 	};
 }

@@ -60,7 +60,7 @@ export async function getStaticPaths() {
 				({ node }) => `/articles/${node.slug}`
 			) || [],
 
-		fallback: false,
+		fallback: "blocking",
 	};
 }
 
@@ -71,6 +71,5 @@ export async function getStaticProps({ params }) {
 		props: {
 			postData: data.post,
 		},
-		revalidate: 60,
 	};
 }
