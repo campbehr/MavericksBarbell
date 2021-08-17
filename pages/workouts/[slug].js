@@ -59,6 +59,7 @@ export async function getStaticPaths() {
 			allPosts.edges.map(
 				({ node }) => `/workouts/${node.slug}`
 			) || [],
+		revalidate: 60,
 		fallback: false,
 	};
 }
@@ -69,6 +70,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			postData: data.post,
+			revalidate: 60,
 		},
 	};
 }
