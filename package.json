@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"deploy": "npm run build && next export -o _static && node rss-gen.js"
+		"deployDO": "npm run build && next export -o _static",
+		"deployVercel": "npm run build && next export"
 	},
 	"dependencies": {
 		"axios": "^0.21.1",
