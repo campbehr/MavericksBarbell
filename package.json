@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"deployStatic": "npm run build && next export -o _static",
-		"deployProd": "npm run build && start"
+		"deployProd": "npm run build && npm run start"
 	},
 	"dependencies": {
 		"axios": "^0.21.1",
