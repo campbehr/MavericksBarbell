@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 //data
-import { getAllArticles } from "../../lib/api";
+import { getAllArticles } from "../../lib/wpGraphQL";
 
 export default function Articles({ allPosts: { edges } }) {
 	return (

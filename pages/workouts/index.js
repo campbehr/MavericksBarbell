@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 //data
-import { getAllWorkouts } from "../../lib/api";
+import { getAllWorkouts } from "../../lib/wpGraphQL";
 
 export default function Workouts({ allPosts: { edges } }) {
 	return (
