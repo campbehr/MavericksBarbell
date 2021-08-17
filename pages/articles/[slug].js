@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
 	getAllPostsWithSlug,
 	getPost,
-} from "../../lib/api";
+} from "../../lib/wpGraphQL";
 
 export default function Post({ postData }) {
 	if (!postData) {
