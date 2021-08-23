@@ -1,0 +1,18 @@
+<svg width="194" height="78" viewBox="0 0 194 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="194" height="78" rx="12" fill="#27ED12"/>
+<rect x="25.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="black" stroke="#27ED12" stroke-width="0.5"/>
+<rect x="33.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="black" stroke="#27ED12" stroke-width="0.5"/>
+<rect x="156.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="black" stroke="#27ED12" stroke-width="0.5"/>
+<rect x="164.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="black" stroke="#27ED12" stroke-width="0.5"/>
+<path d="M77.9482 56V41.3H61.9482V56H56.2982V21.6H61.9482V36.05H77.9482V21.6H83.5482V56H77.9482ZM114.174 55.65C113.074 55.8833 111.724 56.0667 110.124 56.2C108.557 56.3333 107.091 56.4 105.724 56.4C101.557 56.4 98.4907 55.9167 96.524 54.95C94.5574 53.9833 93.2407 52.3 92.574 49.9C91.9074 47.5 91.574 43.8 91.574 38.8C91.574 33.8 91.9074 30.1 92.574 27.7C93.2407 25.3 94.5574 23.6167 96.524 22.65C98.4907 21.6833 101.557 21.2 105.724 21.2C107.124 21.2 108.591 21.2833 110.124 21.45C111.691 21.6167 112.974 21.8167 113.974 22.05V26.8C111.307 26.4667 109.024 26.3 107.124 26.3C103.857 26.3 101.591 26.55 100.324 27.05C99.0574 27.55 98.224 28.6 97.824 30.2C97.424 31.8 97.224 34.6667 97.224 38.8C97.224 42.9333 97.424 45.8 97.824 47.4C98.224 49 99.0574 50.05 100.324 50.55C101.591 51.05 103.857 51.3 107.124 51.3C109.724 51.3 112.074 51.1333 114.174 50.8V55.65ZM121.435 56V21.6H143.385V26.7H127.085V36.95H141.535V42.05H127.085V56H121.435Z" fill="black"/>
+<rect x="39" y="37" width="17" height="4" fill="black"/>
+<rect x="61" y="37" width="17" height="4" fill="black"/>
+<rect x="84" y="37" width="7" height="4" fill="black"/>
+<rect x="12" y="36" width="9" height="6" fill="black"/>
+<rect x="176" y="36" width="9" height="6" fill="black"/>
+<rect x="142" y="37" width="15" height="5" fill="black"/>
+<rect x="172" y="46" width="14" height="4" transform="rotate(-90 172 46)" fill="black"/>
+<rect x="21" y="46" width="14" height="4" transform="rotate(-90 21 46)" fill="black"/>
+<rect x="98" y="37" width="23" height="4" fill="black"/>
+<rect x="123" y="37" width="18" height="4" fill="black"/>
+</svg>

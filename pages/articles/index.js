@@ -11,7 +11,7 @@ export default function Articles({ allPosts: { edges } }) {
 				<title>Blog articles page</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			{console.log(edges)}
+
 			<main className="p-5">
 				<h1>Latest blog articles</h1>
 				<hr />
