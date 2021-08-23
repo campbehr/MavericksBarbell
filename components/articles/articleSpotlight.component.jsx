@@ -7,7 +7,7 @@ const styles = {
 
 const Spotlight = ({ props, feat = true }) => {
 	return (
-		<div className="w-full  h-full  sm:rounded-xl sm:shadow-lg hover:shadow-2xl ">
+		<div className="w-full  h-full  sm:rounded-xl sm:shadow-lg sm:hover:shadow-2xl ">
 			<Link
 				href={`/${props.uri.split("/")[1]}/${
 					props.slug
@@ -15,20 +15,21 @@ const Spotlight = ({ props, feat = true }) => {
 			>
 				<div
 					key={props.id}
-					className="cursor-pointer flex flex-col justify-between sm:flex-row-reverse md:flex-col space-y-2"
+					className="cursor-pointer flex flex-col  sm:flex-row-reverse md:flex-col space-y-2"
 				>
-					{/* <div className="sm:w-1/2 md:w-full"> */}
-					<figure className="sm:w-1/2 md:w-full">
-						<img
-							src={
-								props.extraPostInfo
-									.thumbImage.mediaItemUrl
-							}
-							alt={props.title}
-							className="h-full  rounded-xl sm:rounded-l-none md:rounded-t-xl md:rounded-b-none "
-						/>
-					</figure>
-					{/* </div> */}
+					<div className="sm:w-1/2 md:w-full ">
+						<figure className="">
+							<img
+								src={
+									props.extraPostInfo
+										.thumbImage
+										.mediaItemUrl
+								}
+								alt={props.title}
+								className=" rounded-xl sm:rounded-l-none md:rounded-t-xl md:rounded-b-none object-contain"
+							/>
+						</figure>
+					</div>
 					<div className="flex flex-col space-y-2  sm:w-1/2 sm:pr-2 sm:pl-2  md:w-full md:justify-c">
 						{/* <Link
 						href={`/${

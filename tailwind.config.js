@@ -49,5 +49,8 @@ module.exports = {
 			backgroundColor: ["active"],
 		},
 	},
-	plugins: [],
+	plugins: [
+		require("tailwindcss"),
+		require("autoprefixer"),
+	],
 };
