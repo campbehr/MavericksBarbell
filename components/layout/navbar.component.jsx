@@ -6,7 +6,7 @@ const Navbar = () => {
 		sideMenu:
 			"absolute right-0 inset-y-20  container box-content h-screen md:hidden transition-all duration-500 ease-in-out bg-primary",
 		linksDefault:
-			"absolute inset-y-20 p-4 md:relative md:flex md:inset-y-auto md:right-auto md:p-0 md:transform md:scale-x-1 transition-all duration-300 ease-in z-10 text-letters-light active:underline",
+			"absolute inset-y-20 p-4 md:relative md:flex md:inset-y-auto md:right-auto md:p-0 md:transform md:scale-x-1 transition-all duration-300 ease-in z-50 text-letters-light active:underline",
 		linksMobileOpen: " right-24",
 		linksMobileClosed:
 			"-right-10 transform scale-x-0  ",
@@ -14,15 +14,15 @@ const Navbar = () => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div className="fixed w-full bg-primary grid grid-cols-none xl:grid-cols-3">
+		<div className="fixed w-full bg-primary grid grid-cols-none lg:grid-cols-3">
 			{/* Navbar items container */}
-			<div className=" xl:col-start-2 flex flex-row justify-between items-center p-5">
+			<div className=" lg:col-start-2 flex flex-row justify-between items-center p-5">
 				{/* Logo container */}
 				<div className="">
 					<Link href="/">
 						<img
 							className="h-10 md:h-14 cursor-pointer"
-							src="/logo.svg"
+							src="/logoGrnBlk.svg"
 							alt="logo"
 						/>
 					</Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
 				>
 					<ul
 						className={
-							"flex flex-col space-y-8 md:flex-row md:space-x-2.5 md:space-y-0"
+							"flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0"
 						}
 					>
 						<li>

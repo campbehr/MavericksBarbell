@@ -4,8 +4,8 @@ import NewsLetterSignuUpForm from "../newsLetter/newsLetterSignUpForm.component"
 
 const Footer = () => {
 	return (
-		<div className="bg-primary grid  grid-cols-none xl:grid-cols-3">
-			<div className="grid grid-rows-2 p-5 md:grid-rows-none md:flex md:flex-row-reverse  md:justify-between md:space-y-8  xl:col-start-2 ">
+		<div className="bg-primary grid  grid-cols-none lg:grid-cols-3">
+			<div className="grid grid-rows-2 p-5 md:grid-rows-none md:flex md:flex-row-reverse  md:justify-between md:space-y-8  lg:col-start-2 ">
 				<div className="hidden lg:block">
 					{/* Spacer Block */}
 				</div>
