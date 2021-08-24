@@ -18,7 +18,7 @@ const Spotlight = ({ props, feat = true }) => {
 					className="cursor-pointer flex flex-col  sm:flex-row-reverse md:flex-col space-y-2"
 				>
 					<div className="sm:w-1/2 md:w-full ">
-						<figure className="">
+						<figure>
 							<img
 								src={
 									props.extraPostInfo
@@ -44,7 +44,7 @@ const Spotlight = ({ props, feat = true }) => {
 						<p
 							className={`${
 								!feat ? styles.hidden : ""
-							}  text-letters-grey text-sm md:text-xl lg:pr-28 `}
+							}  text-letters-grey text-sm md:text-xl  `}
 						>
 							{
 								props.extraPostInfo
@@ -59,7 +59,7 @@ const Spotlight = ({ props, feat = true }) => {
 						<p
 							className={`${
 								!feat ? styles.hidden : ""
-							} font-bold underline text-letters-grey md:text-2xl`}
+							} font-bold underline text-letters-grey md:text-xl`}
 						>
 							Read more{" "}
 						</p>
