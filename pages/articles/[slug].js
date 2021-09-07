@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { styles } from "../../styles/tailwindGlobals";
 
 // data
 import {
@@ -10,6 +11,7 @@ import {
 
 export default function Post({ postData }) {
 	const router = useRouter();
+	const featImg = postData.extraPostInfo.featimg;
 
 	if (router.isFallback) {
 		return <div>Loading...</div>;
@@ -36,21 +38,38 @@ export default function Post({ postData }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>
-				<article>
-					<div>
-						<h1>{postData.title}</h1>
-						<p>{formatDate(postData.date)}</p>
+			<main className="space-y-20">
+				<article className="space-y-4">
+					<div className="space-y-10">
+						<h1 className={`${styles.h1}`}>
+							{postData.title}
+						</h1>
+
+						{featImg === null ? (
+							<></>
+						) : (
+							<div className="w-full flex justify-center bg-secondary shadow-xl ">
+								<img
+									src={featImg.sourceUrl}
+									alt={postData.title}
+								/>
+							</div>
+						)}
+
+						<p className={`${styles.date}`}>
+							{formatDate(postData.date)}
+						</p>
 					</div>
 					<div
 						dangerouslySetInnerHTML={{
 							__html: postData.content,
 						}}
+						className="tracking-wide leading-7 space-y-6"
 					/>
 				</article>
-				<p>
+				<p className={`${styles.date} text-center`}>
 					<Link href="/articles">
-						<a>back to articles</a>
+						<a>Back To Articles</a>
 					</Link>
 				</p>
 			</main>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { styles } from "../../styles/tailwindGlobals";
 
 // data
 import {
@@ -21,6 +22,8 @@ export default function Post({ postData }) {
 		);
 	}
 
+	console.log(postData.content);
+
 	const formatDate = (date) => {
 		const newDate = new Date(date);
 
@@ -36,21 +39,26 @@ export default function Post({ postData }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main>
-				<article>
-					<div>
-						<h1>{postData.title}</h1>
-						<p>{formatDate(postData.date)}</p>
+			<main className="space-y-20">
+				<article className="space-y-4">
+					<div className="space-y-10">
+						<h1 className={`${styles.h1}`}>
+							{postData.title}
+						</h1>
+						<p className={`${styles.date}`}>
+							{formatDate(postData.date)}
+						</p>
 					</div>
 					<div
 						dangerouslySetInnerHTML={{
 							__html: postData.content,
 						}}
+						className="tracking-wide leading-7 space-y-6 text-primary"
 					/>
 				</article>
-				<p>
+				<p className={`${styles.date} text-center`}>
 					<Link href="/workouts">
-						<a>back to workouts</a>
+						<a>Back To Workouts</a>
 					</Link>
 				</p>
 			</main>

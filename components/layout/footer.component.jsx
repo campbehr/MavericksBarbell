@@ -22,28 +22,23 @@ const Footer = () => {
 					<NewsLetterSignuUpForm />
 				</div>
 				<div className="flex items-center row-start-2  text-letters-light ">
-					<ul className="flex w-full justify-between text-lg md:flex-col md:space-y-4 md:text-xl ">
-						<li>
-							<Link href="/about">
-								<a>About</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/articles">
-								<a>Articles</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/workouts">
-								<a>Workouts</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/contact">
-								<a>Contact</a>
-							</Link>
-						</li>
-					</ul>
+					<div className="flex w-full justify-between text-lg md:flex-col md:space-y-4 md:text-xl ">
+						<Link href="/about">
+							<a>About</a>
+						</Link>
+
+						<Link href="/articles">
+							<a>Articles</a>
+						</Link>
+
+						<Link href="/workouts">
+							<a>Workouts</a>
+						</Link>
+
+						<Link href="/contact">
+							<a>Contact</a>
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>
