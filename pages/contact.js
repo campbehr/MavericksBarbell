@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import ContactForm from "../components/contactForm/contactForm.component";
-import { styles } from "../styles/tailwindGlobals";
+import ContactForm from "../components/forms/contactForm.component";
+import { styles } from "../styles/pages.styles";
 
 export default function ContactPage() {
 	return (

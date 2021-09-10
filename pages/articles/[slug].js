@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { styles } from "../../styles/tailwindGlobals";
+import { styles } from "../../styles/pages.styles";
 
 // data
 import {

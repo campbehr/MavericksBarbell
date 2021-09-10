@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import NewsLetterSignuUpForm from "../newsLetter/newsLetterSignUpForm.component";
+import NewsLetterSignuUpForm from "../forms/newsLetterSignUpForm.component";
 
 const Footer = () => {
 	return (

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { styles } from "../../styles/tailwindGlobals";
+import { formsStyles } from "./forms.styles";
 
 const ContactForm = () => {
 	const name = useRef(null);
@@ -40,7 +40,7 @@ const ContactForm = () => {
 					type="text"
 					placeholder="Name"
 					ref={name}
-					className={`${styles.contactInput}`}
+					className={`${formsStyles.contactInput}`}
 				/>
 			</label>
 			<label htmlFor="email">
@@ -49,52 +49,52 @@ const ContactForm = () => {
 					type="text"
 					placeholder="Email"
 					ref={email}
-					className={`${styles.contactInput}`}
+					className={`${formsStyles.contactInput}`}
 				/>
 			</label>
 
 			<div className="flex flex-wrap">
 				<label
-					className={`${styles.checkboxLabel}`}
+					className={`${formsStyles.checkboxLabel}`}
 				>
 					<input
 						id="workouts"
 						type="checkbox"
 						ref={workouts}
-						className={`${styles.checkbox}`}
+						className={`${formsStyles.checkbox}`}
 					/>
 					<span
-						className={`${styles.checkboxSpan}`}
+						className={`${formsStyles.checkboxSpan}`}
 					>
 						Workouts
 					</span>
 				</label>
 				<label
-					className={`${styles.checkboxLabel}`}
+					className={`${formsStyles.checkboxLabel}`}
 				>
 					<input
 						id="articles"
 						type="checkbox"
 						ref={articles}
-						className={`${styles.checkbox}`}
+						className={`${formsStyles.checkbox}`}
 					/>
 					<span
-						className={`${styles.checkboxSpan}`}
+						className={`${formsStyles.checkboxSpan}`}
 					>
 						Articles
 					</span>
 				</label>
 				<label
-					className={`${styles.checkboxLabel}`}
+					className={`${formsStyles.checkboxLabel}`}
 				>
 					<input
 						id="training"
 						type="checkbox"
 						ref={training}
-						className={`${styles.checkbox}`}
+						className={`${formsStyles.checkbox}`}
 					/>
 					<span
-						className={`${styles.checkboxSpan}`}
+						className={`${formsStyles.checkboxSpan}`}
 					>
 						Training
 					</span>
@@ -107,12 +107,12 @@ const ContactForm = () => {
 					rows="6"
 					placeholder="Message"
 					ref={message}
-					className={`${styles.contactInput} resize-y h-24 md:h-48`}
+					className={`${formsStyles.contactInput} resize-y h-24 md:h-48`}
 				/>
 			</label>
 			<button
 				type="submit"
-				className={`${styles.btn} `}
+				className={`${formsStyles.btn} `}
 			>
 				Send
 			</button>

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
-import { styles } from "../../styles/tailwindGlobals";
+import { formsStyles } from "./forms.styles";
 
 const NewsLetterSignUpForm = () => {
 	const email = useRef(null);
@@ -44,11 +44,11 @@ const NewsLetterSignUpForm = () => {
 					placeholder="Your Email"
 					ref={email}
 					required
-					className={`${styles.input}`}
+					className={`${formsStyles.input}`}
 				></input>
 				<button
 					type="submit"
-					className={`${styles.btn}`}
+					className={`${formsStyles.btn}`}
 				>
 					Subscribe
 				</button>
