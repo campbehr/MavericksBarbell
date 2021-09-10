@@ -48,7 +48,7 @@ const NewsLetterSignUpForm = () => {
 				></input>
 				<button
 					type="submit"
-					className={`${styles.submit}`}
+					className={`${styles.btn}`}
 				>
 					Subscribe
 				</button>

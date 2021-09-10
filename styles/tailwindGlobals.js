@@ -9,7 +9,7 @@ export const styles = {
 	checkbox: " h-5 w-5  ",
 	checkboxSpan: "pl-2",
 	checkboxLabel: "inline-flex items-center p-2 ",
-	submit: "bg-secondary text-letters-dark text-xl md:font-medium md:px-4 md:border-l-2 md:border-secondary-active font-bold h-12 rounded-md md:rounded-l-none hover:bg-secondary-active focus:outline-none focus:ring-2 md:focus:ring-inset focus:ring-secondary focus:ring-opacity-50",
+	btn: "bg-secondary text-letters-dark text-xl md:font-medium md:px-4 md:border-l-2 md:border-secondary-active font-bold h-12 rounded-md md:rounded-l-none hover:bg-secondary-active focus:outline-none focus:ring-2 md:focus:ring-inset focus:ring-secondary focus:ring-opacity-50",
 	toastBox:
 		"w-64 md:w-96 h-14 md:h-20 lg mt-20 lg:mt-40 border-2 border-primary flex justify-center items-center bg-secondary rounded-md text-lg md:text-2xl font-medium text-letters ",
 	toastSuccess: "bg-secondary",

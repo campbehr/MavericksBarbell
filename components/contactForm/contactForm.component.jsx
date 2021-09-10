@@ -112,7 +112,7 @@ const ContactForm = () => {
 			</label>
 			<button
 				type="submit"
-				className={`${styles.submit} `}
+				className={`${styles.btn} `}
 			>
 				Send
 			</button>
