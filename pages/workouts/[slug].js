@@ -22,8 +22,6 @@ export default function Post({ postData }) {
 		);
 	}
 
-	console.log(postData.content);
-
 	const formatDate = (date) => {
 		const newDate = new Date(date);
 

@@ -30,11 +30,9 @@ export default function Articles({ allPosts: { edges } }) {
 					{edges.map(({ node }) => (
 						<Link
 							href={`/articles/${node.slug}`}
+							key={node.id}
 						>
-							<div
-								key={node.id}
-								className="flex flex-col sm:flex-row-reverse sm:justify-between bg-white h-20 xs:h-28 md:h-40 overflow-hidden shadow-lg hover:shadow-2xl rounded-lg cursor-pointer"
-							>
+							<div className="flex flex-col sm:flex-row-reverse sm:justify-between bg-white h-20 xs:h-28 md:h-40 overflow-hidden shadow-lg hover:shadow-2xl rounded-lg cursor-pointer">
 								<div>
 									<figure className="hidden sm:block sm:w-48 md:w-80">
 										<img

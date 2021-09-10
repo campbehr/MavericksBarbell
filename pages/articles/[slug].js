@@ -11,7 +11,6 @@ import {
 
 export default function Post({ postData }) {
 	const router = useRouter();
-	const featImg = postData.extraPostInfo.featimg;
 
 	if (router.isFallback) {
 		return <div>Loading...</div>;
@@ -45,12 +44,18 @@ export default function Post({ postData }) {
 							{postData.title}
 						</h1>
 
-						{featImg === null ? (
+						{postData.extraPostInfo.featimg ===
+						null ? (
 							<></>
 						) : (
 							<div className="w-full flex justify-center bg-secondary shadow-xl ">
 								<img
-									src={featImg.sourceUrl}
+									src={
+										postData
+											.extraPostInfo
+											.featimg
+											.sourceUrl
+									}
 									alt={postData.title}
 								/>
 							</div>
