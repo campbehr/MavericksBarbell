@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/dist/client/link";
 
 import Spotlight from "../components/articles/articleSpotlight.component";
 
@@ -39,9 +40,13 @@ export default function Home({ allStaticProps }) {
 				</section>
 
 				<section className="w-full row-start-2 flex flex-col space-y-10 md:space-y-16">
-					<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
-						Featured Workouts
-					</h2>
+					<Link href="/workouts">
+						<a>
+							<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
+								Workouts
+							</h2>
+						</a>
+					</Link>
 					<div className="md:flex md:flex-row md:space-x-8 space-y-8 md:space-y-0">
 						<div className="flex md:w-full">
 							<Spotlight
@@ -71,9 +76,14 @@ export default function Home({ allStaticProps }) {
 					About Excerpt
 				</section>
 				<section className="w-full row-start-2 flex flex-col space-y-10 md:space-y-16">
-					<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
-						Featured Articles
-					</h2>
+					<Link href="/workouts">
+						<a>
+							<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
+								Articles
+							</h2>
+						</a>
+					</Link>
+
 					<div className="md:flex md:flex-row-reverse  md:space-x-8 md:space-x-reverse space-y-8 md:space-y-0 ">
 						<div className="flex md:w-full ">
 							<Spotlight

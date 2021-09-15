@@ -34,39 +34,33 @@ const Navbar = () => {
 							? styles.linksMobileOpen
 							: styles.linksMobileClosed
 					} ${styles.linksDefault}`}
-					onClick={() => setOpen(!open)}
 				>
-					<ul
+					<div
 						className={
 							"flex flex-col space-y-8 md:flex-row md:space-x-6 md:space-y-0"
 						}
+						onClick={() => setOpen(!open)}
 					>
-						<li>
-							<Link href="/">
-								<a>Home</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/about">
-								<a>About</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/articles">
-								<a>Articles</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/workouts">
-								<a>Workouts</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/contact">
-								<a>Contact</a>
-							</Link>
-						</li>
-					</ul>
+						<Link href="/">
+							<a>Home</a>
+						</Link>
+
+						<Link href="/about">
+							<a>About</a>
+						</Link>
+
+						<Link href="/articles">
+							<a>Articles</a>
+						</Link>
+
+						<Link href="/workouts">
+							<a>Workouts</a>
+						</Link>
+
+						<Link href="/contact">
+							<a>Contact</a>
+						</Link>
+					</div>
 				</div>
 				{/* Mobile menu button container */}
 				<div

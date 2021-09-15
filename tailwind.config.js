@@ -42,11 +42,16 @@ module.exports = {
 			red: {
 				DEFAULT: colors.red[600],
 			},
+			white: {
+				DEFAULT: colors.white,
+			},
 		},
 	},
 	variants: {
 		extend: {
 			backgroundColor: ["active"],
+			backgroundColor: ["checked"],
+			borderColor: ["checked"],
 		},
 	},
 	plugins: [
