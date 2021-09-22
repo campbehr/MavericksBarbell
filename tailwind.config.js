@@ -7,13 +7,13 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
+		fontFamily: {
+			stick: ['"Stick No Bills"'],
+			robot: ["Roboto"],
+		},
 		extend: {
 			backgroundImage: {
 				hero: "url('/heroImg.svg')",
-			},
-			fontFamily: {
-				stick: ["Stick No Bills"],
-				robot: ["Roboto"],
 			},
 			gridTemplateColumns: {
 				//Simple 3 column grid
