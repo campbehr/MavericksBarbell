@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	purge: [
@@ -7,13 +8,16 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		fontFamily: {
-			stick: ['"Stick No Bills"'],
-			robot: ["Roboto"],
-		},
 		extend: {
 			backgroundImage: {
 				hero: "url('/heroImg.svg')",
+			},
+			fontFamily: {
+				sans: [
+					'"Stick No Bills"',
+					"Roboto",
+					...defaultTheme.fontFamily.sans,
+				],
 			},
 			gridTemplateColumns: {
 				//Simple 3 column grid

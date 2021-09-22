@@ -31,10 +31,6 @@ export default function Home({ allStaticProps }) {
 			<Head>
 				<title>Hunter Campbell Fitness</title>
 				<link rel="icon" href="/favicon.ico" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600&display=swap"
-					rel="stylesheet"
-				/>
 			</Head>
 
 			<main className="grid-rows-6 z-10 p-5 space-y-10">

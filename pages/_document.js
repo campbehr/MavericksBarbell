@@ -18,13 +18,27 @@ class MyDocument extends Document {
 			<Html>
 				<Head>
 					<link
-						href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@600&display=swap"
-						rel="stylesheet"
+						rel="preconnect"
+						href="https://fonts.gstatic.com"
+						crossOrigin="true"
 					/>
 					<link
-						href="https://fonts.googleapis.com/css2?family=Roboto"
-						rel="stylesheet"
+						rel="preload"
+						as="style"
+						href="https://fonts.googleapis.com/css2?family=Roboto&family=Stick+No+Bills:wght@600&display=swap"
 					/>
+					<link
+						rel="stylesheet"
+						href="https://fonts.googleapis.com/css2?family=Roboto&family=Stick+No+Bills:wght@600&display=swap"
+						media="print"
+						onLoad="this.media='all'"
+					/>
+					<noscript>
+						<link
+							rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Roboto&family=Stick+No+Bills:wght@600&display=swap"
+						/>
+					</noscript>
 				</Head>
 				<body>
 					<Main />
