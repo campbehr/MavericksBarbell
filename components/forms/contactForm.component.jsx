@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useToasts } from "react-toast-notifications";
 import { formsStyles } from "./forms.styles";
 
 const ContactForm = () => {
@@ -8,6 +9,8 @@ const ContactForm = () => {
 	const workouts = useRef("off");
 	const articles = useRef("off");
 	const training = useRef("off");
+
+	const { addToast } = useToasts();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -20,12 +23,24 @@ const ContactForm = () => {
 				articles: articles.current.checked,
 				training: training.current.checked,
 			};
+
 			fetch("api/contact", {
 				method: "post",
 				body: JSON.stringify(data),
+			}).then((result) => {
+				if (
+					result.status >= 200 &&
+					result.status < 300
+				) {
+					addToast(result.data, {
+						appearance: "success",
+					});
+				}
 			});
 		} catch (error) {
-			console.log("something went astray");
+			addToast(error.message, {
+				appearance: "error",
+			});
 		}
 	};
 

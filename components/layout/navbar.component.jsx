@@ -22,7 +22,7 @@ const Navbar = () => {
 					<Link href="/">
 						<img
 							className="h-10 md:h-14 cursor-pointer"
-							src="/logoGrnBlk.svg"
+							src="/navLogo.svg"
 							alt="logo"
 						/>
 					</Link>

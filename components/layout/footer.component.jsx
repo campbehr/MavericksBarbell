@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import NewsLetterSignuUpForm from "../forms/newsLetterSignUpForm.component";
+
+import MailingList from "../forms/sendGrid";
 
 const Footer = () => {
 	return (
@@ -19,7 +20,7 @@ const Footer = () => {
 							routine
 						</p>
 					</div>
-					<NewsLetterSignuUpForm />
+					<MailingList />
 				</div>
 				<div className="flex items-center row-start-2  text-letters-light ">
 					<div className="flex w-full justify-between text-lg md:flex-col md:space-y-4 md:text-xl ">

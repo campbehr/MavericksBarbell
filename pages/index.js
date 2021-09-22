@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/dist/client/link";
+import { styles } from "../styles/pages.styles";
 
 import Spotlight from "../components/articles/articleSpotlight.component";
 
@@ -33,9 +34,15 @@ export default function Home({ allStaticProps }) {
 			</Head>
 
 			<main className="grid-rows-6 z-10 p-5 space-y-10">
-				<section className="w-full h-screen row-start-1">
-					<div className="w-full h-full  bg-secondary">
-						Hero
+				<section className="w-full h-96 pt-10  row-start-1">
+					<div className="flex flex-col-reverse md:flex-col justify-evenly items-center md:items-start md:pl-5 w-full h-full  bg-hero rounded-xl ">
+						<img
+							src="/mavCap.svg"
+							alt="Picture of barbell cap of black dog"
+						/>
+						<h1 className={styles.heroHeader}>
+							Maverick's Barbell
+						</h1>
 					</div>
 				</section>
 
