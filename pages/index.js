@@ -40,7 +40,7 @@ export default function Home({ allStaticProps }) {
 							src="/mavCap.svg"
 							alt="Picture of barbell cap of black dog"
 						/>
-						<h1 className={styles.heroHeader}>
+						<h1 className="text-5xl xs:text-6xl sm:text-7xl lg:text-8xl text-letters-light text-center font-semibold">
 							Maverick's Barbell
 						</h1>
 					</div>

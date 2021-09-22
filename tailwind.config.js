@@ -14,8 +14,8 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: [
-					'"Stick No Bills"',
 					"Roboto",
+					'"Stick No Bills"',
 					...defaultTheme.fontFamily.sans,
 				],
 			},
