@@ -21,8 +21,8 @@ export default function Articles({ allPosts: { edges } }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="p-5 space-y-10 md:space-y-16">
-				<h1 className={`${styles.h1}`}>
+			<main className={styles.pageMain}>
+				<h1 className={styles.h1}>
 					Latest Articles
 				</h1>
 
@@ -48,14 +48,18 @@ export default function Articles({ allPosts: { edges } }) {
 								</div>
 								<div className="overflow-ellipsis px-2 space-y-1">
 									<p
-										className={`${styles.date}`}
+										className={
+											styles.date
+										}
 									>
 										{formatDate(
 											node.date
 										)}
 									</p>
 									<h3
-										className={`${styles.h3}`}
+										className={
+											styles.h3
+										}
 									>
 										{node.title}
 									</h3>

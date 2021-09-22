@@ -1,0 +1,16 @@
+<svg width="194" height="78" viewBox="0 0 194 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="194" height="78" rx="12" fill="#447CBB"/>
+<rect x="25.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="#030303" stroke="#447CBB" stroke-width="0.5"/>
+<rect x="33.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="#030303" stroke="#447CBB" stroke-width="0.5"/>
+<rect x="156.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="#030303" stroke="#447CBB" stroke-width="0.5"/>
+<rect x="164.25" y="11.25" width="7.5" height="54.5" rx="1.75" fill="#030303" stroke="#447CBB" stroke-width="0.5"/>
+<path d="M68.9173 58L54.6723 23.845V19.5H59.9523L71.2273 46.835L78.2123 31.105H78.7623V46.395L73.5923 58H68.9173ZM54.6723 58V32.48H55.1673L61.3823 47.385V58H54.6723ZM81.6223 58V19.5H88.3323V58H81.6223ZM110.843 58L109.688 52.83H103.088L104.518 46.23H107.873L101.933 19.5H108.588L117.498 58H110.843ZM92.4182 58L99.5682 25.825H100.448L103.198 38.75L98.9632 58H92.4182ZM130.247 58L119.082 19.5H125.902L135.032 50.63L132.557 58H130.247ZM136.077 43.865L132.997 33.36L137.342 19.5H144.162L136.627 43.865H136.077Z" fill="#030303"/>
+<rect x="39" y="36" width="15" height="6" fill="#030303"/>
+<rect x="89" y="36" width="6" height="6" fill="#030303"/>
+<rect x="115" y="36" width="8" height="6" fill="#030303"/>
+<rect x="12" y="36" width="9" height="6" fill="#030303"/>
+<rect x="176" y="36" width="9" height="6" fill="#030303"/>
+<rect x="140" y="36" width="17" height="6" fill="#030303"/>
+<rect x="172" y="46" width="14" height="4" transform="rotate(-90 172 46)" fill="#030303"/>
+<rect x="21" y="46" width="14" height="4" transform="rotate(-90 21 46)" fill="#030303"/>
+</svg>

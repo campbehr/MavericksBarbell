@@ -40,7 +40,7 @@ export default function Post({ postData }) {
 			<main className="space-y-20">
 				<article className="space-y-4">
 					<div className="space-y-10">
-						<h1 className={`${styles.h1}`}>
+						<h1 className={styles.h1}>
 							{postData.title}
 						</h1>
 
@@ -61,7 +61,7 @@ export default function Post({ postData }) {
 							</div>
 						)}
 
-						<p className={`${styles.date}`}>
+						<p className={styles.date}>
 							{formatDate(postData.date)}
 						</p>
 					</div>
@@ -69,7 +69,7 @@ export default function Post({ postData }) {
 						dangerouslySetInnerHTML={{
 							__html: postData.content,
 						}}
-						className="tracking-wide leading-7 space-y-6"
+						className="tracking-wide leading-7 space-y-6 md:space-y-10"
 					/>
 				</article>
 				<p className={`${styles.date} text-center`}>

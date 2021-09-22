@@ -21,8 +21,8 @@ export default function Workouts({ allPosts: { edges } }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className={`${styles.pageMain}`}>
-				<h1 className={`${styles.h1}`}>
+			<main className={styles.pageMain}>
+				<h1 className={styles.h1}>
 					Latest Workouts
 				</h1>
 				<section className="space-y-4 sm:space-y-8">
@@ -48,13 +48,19 @@ export default function Workouts({ allPosts: { edges } }) {
 									</figure>
 								</div>
 								<div className="overflow-ellipsis px-2 space-y-1">
-									<p className="font-medium underline text-letters-grey md:text-xl">
+									<p
+										className={
+											styles.date
+										}
+									>
 										{formatDate(
 											node.date
 										)}
 									</p>
 									<h3
-										className={`${styles.h3}`}
+										className={
+											styles.h3
+										}
 									>
 										{node.title}
 									</h3>

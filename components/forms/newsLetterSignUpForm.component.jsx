@@ -12,15 +12,13 @@ const NewsLetterSignUpForm = () => {
 		event.preventDefault();
 		try {
 			const response = await axios.post(
-				"/api/subscribe",
+				"api/subscribe",
 				{ email: email.current.value }
 			);
-			//Toast package handled on app entry file
 			addToast("🏋️‍♀️ Thanks for signing up! 🏋️‍♀️", {
 				appearance: "success",
 			});
 		} catch (error) {
-			//Toast package handled on app entry file
 			addToast(
 				"Something went wrong with your submission 🤷",
 				{

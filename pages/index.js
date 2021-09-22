@@ -12,6 +12,12 @@ import {
 	getLatestFatBurnerArticle,
 } from "../lib/wpGraphQL";
 
+const styles = {
+	h2: "w-full  text-center font-mono text-4xl xs:text-5xl sm:text-6xl lg:text-7xl text-letters-dark",
+	blogSection:
+		"w-full row-start-2 flex flex-col space-y-10 md:space-y-16",
+};
+
 export default function Home({ allStaticProps }) {
 	const featuredArticle =
 		allStaticProps.featuredArticle.edges[0].node;
@@ -32,17 +38,23 @@ export default function Home({ allStaticProps }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="grid-rows-6 z-10 p-5 space-y-10">
-				<section className="w-full h-screen row-start-1">
-					<div className="w-full h-full  bg-secondary">
-						Hero
+			<main className="grid-rows-6 z-10 p-5 space-y-10 md:space-y-32 ">
+				<section className=" w-full h-96 pt-10 row-start-1">
+					<div className="flex flex-col-reverse md:flex-col justify-evenly items-center md:items-start md:pl-5 w-full h-full  bg-hero rounded-xl ">
+						<img
+							src="/mavCap.svg"
+							alt="Picture of barbell cap of black dog"
+						/>
+						<h1 className="text-5xl xs:text-6xl sm:text-7xl lg:text-8xl text-letters-light text-center font-semibold font-mono ">
+							Maverick's Barbell
+						</h1>
 					</div>
 				</section>
 
-				<section className="w-full row-start-2 flex flex-col space-y-10 md:space-y-16">
+				<section className={styles.blogSection}>
 					<Link href="/workouts">
 						<a>
-							<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
+							<h2 className={styles.h2}>
 								Workouts
 							</h2>
 						</a>
@@ -75,10 +87,10 @@ export default function Home({ allStaticProps }) {
 				<section className="w-full h-96 row-start-4 bg-primary text-color-letters">
 					About Excerpt
 				</section>
-				<section className="w-full row-start-2 flex flex-col space-y-10 md:space-y-16">
+				<section className={styles.blogSection}>
 					<Link href="/workouts">
 						<a>
-							<h2 className="w-full  text-center font-sans text-3xl xs:text-4xl sm:text-5xl lg:text-7xl text-letters-dark">
+							<h2 className={styles.h2}>
 								Articles
 							</h2>
 						</a>

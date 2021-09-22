@@ -22,6 +22,16 @@ export default async (req, res) => {
 		html: message.replace(/\r\n/g, "<br />"),
 	};
 
-	await mail.send(data);
-	res.status(200).json({ status: "OK", message: "👍" });
+	try {
+		await mail.send(data);
+		res.status(200).json({
+			status: "OK",
+			message: "👍",
+		});
+	} catch (err) {
+		res.status(500).json({
+			status: "Fail",
+			message: "Something went wrong.",
+		});
+	}
 };

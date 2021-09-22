@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
 	purge: [
@@ -8,6 +9,19 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			backgroundImage: {
+				hero: "url('/heroImg.svg')",
+			},
+			fontFamily: {
+				sans: [
+					"Roboto",
+					...defaultTheme.fontFamily.sans,
+				],
+				mono: [
+					'"Stick No Bills"',
+					...defaultTheme.fontFamily.mono,
+				],
+			},
 			gridTemplateColumns: {
 				//Simple 3 column grid
 				3: "auto minmax(0, 1040px) auto",
@@ -29,10 +43,10 @@ module.exports = {
 		colors: {
 			transparent: "transparent",
 			current: "currentColor",
-			primary: colors.coolGray[900],
+			primary: colors.black,
 			secondary: {
-				DEFAULT: "#27ED12",
-				active: "#21D10F",
+				DEFAULT: "#447CBB",
+				active: "#2D5E96",
 			},
 			letters: {
 				light: "#F1F1F1",

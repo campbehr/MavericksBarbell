@@ -51,7 +51,7 @@ export default function Post({ postData }) {
 						dangerouslySetInnerHTML={{
 							__html: postData.content,
 						}}
-						className="tracking-wide leading-7 space-y-6 text-primary"
+						className="tracking-wide leading-7 space-y-6 md:space-y-10 text-primary"
 					/>
 				</article>
 				<p className={`${styles.date} text-center`}>

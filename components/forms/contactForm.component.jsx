@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useToasts } from "react-toast-notifications";
 import { formsStyles } from "./forms.styles";
 
 const ContactForm = () => {
@@ -8,6 +9,8 @@ const ContactForm = () => {
 	const workouts = useRef("off");
 	const articles = useRef("off");
 	const training = useRef("off");
+
+	const { addToast } = useToasts();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -20,12 +23,24 @@ const ContactForm = () => {
 				articles: articles.current.checked,
 				training: training.current.checked,
 			};
+
 			fetch("api/contact", {
 				method: "post",
 				body: JSON.stringify(data),
+			}).then((result) => {
+				if (
+					result.status >= 200 &&
+					result.status < 300
+				) {
+					addToast(result.data, {
+						appearance: "success",
+					});
+				}
 			});
 		} catch (error) {
-			console.log("something went astray");
+			addToast(error.message, {
+				appearance: "error",
+			});
 		}
 	};
 
@@ -40,7 +55,7 @@ const ContactForm = () => {
 					type="text"
 					placeholder="Name"
 					ref={name}
-					className={`${formsStyles.contactInput}`}
+					className={formsStyles.contactInput}
 				/>
 			</label>
 			<label htmlFor="email">
@@ -48,53 +63,54 @@ const ContactForm = () => {
 					id="email"
 					type="text"
 					placeholder="Email"
+					required
 					ref={email}
-					className={`${formsStyles.contactInput}`}
+					className={formsStyles.contactInput}
 				/>
 			</label>
 
 			<div className="flex flex-wrap">
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="workouts"
 						type="checkbox"
 						ref={workouts}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Workouts
 					</span>
 				</label>
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="articles"
 						type="checkbox"
 						ref={articles}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Articles
 					</span>
 				</label>
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="training"
 						type="checkbox"
 						ref={training}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Training
 					</span>
@@ -103,6 +119,7 @@ const ContactForm = () => {
 			<label htmlFor="message">
 				<textarea
 					id="message"
+					required
 					type="text"
 					rows="6"
 					placeholder="Message"
@@ -112,7 +129,7 @@ const ContactForm = () => {
 			</label>
 			<button
 				type="submit"
-				className={`${formsStyles.btn} `}
+				className={formsStyles.btn}
 			>
 				Send
 			</button>

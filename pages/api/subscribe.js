@@ -7,8 +7,6 @@ function getRequestParams(email) {
 		process.env.MAILCHIMP_API_KEY.split("-")[1];
 	const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
-	// you can add aditional paramaters here. See full list of available paramaters at:
-	// https://mailchimp.com/developer/reference/lists/list-members/
 	const data = {
 		email_address: email,
 		status: "subscribed",
