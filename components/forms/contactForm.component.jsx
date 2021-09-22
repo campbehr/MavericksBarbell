@@ -55,7 +55,7 @@ const ContactForm = () => {
 					type="text"
 					placeholder="Name"
 					ref={name}
-					className={`${formsStyles.contactInput}`}
+					className={formsStyles.contactInput}
 				/>
 			</label>
 			<label htmlFor="email">
@@ -63,53 +63,54 @@ const ContactForm = () => {
 					id="email"
 					type="text"
 					placeholder="Email"
+					required
 					ref={email}
-					className={`${formsStyles.contactInput}`}
+					className={formsStyles.contactInput}
 				/>
 			</label>
 
 			<div className="flex flex-wrap">
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="workouts"
 						type="checkbox"
 						ref={workouts}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Workouts
 					</span>
 				</label>
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="articles"
 						type="checkbox"
 						ref={articles}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Articles
 					</span>
 				</label>
 				<label
-					className={`${formsStyles.checkboxLabel}`}
+					className={formsStyles.checkboxLabel}
 				>
 					<input
 						id="training"
 						type="checkbox"
 						ref={training}
-						className={`${formsStyles.checkbox}`}
+						className={formsStyles.checkbox}
 					/>
 					<span
-						className={`${formsStyles.checkboxSpan}`}
+						className={formsStyles.checkboxSpan}
 					>
 						Training
 					</span>
@@ -118,6 +119,7 @@ const ContactForm = () => {
 			<label htmlFor="message">
 				<textarea
 					id="message"
+					required
 					type="text"
 					rows="6"
 					placeholder="Message"
@@ -127,7 +129,7 @@ const ContactForm = () => {
 			</label>
 			<button
 				type="submit"
-				className={`${formsStyles.btn} `}
+				className={formsStyles.btn}
 			>
 				Send
 			</button>

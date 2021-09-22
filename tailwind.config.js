@@ -15,8 +15,11 @@ module.exports = {
 			fontFamily: {
 				sans: [
 					"Roboto",
-					'"Stick No Bills"',
 					...defaultTheme.fontFamily.sans,
+				],
+				mono: [
+					'"Stick No Bills"',
+					...defaultTheme.fontFamily.mono,
 				],
 			},
 			gridTemplateColumns: {

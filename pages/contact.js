@@ -12,7 +12,7 @@ export default function ContactPage() {
 			</Head>
 
 			<main className={`${styles.pageMain} mb-20`}>
-				<h1 className={`${styles.h1}`}>Contact</h1>
+				<h1 className={styles.h1}>Contact</h1>
 				<div className="flex flex-col-reverse md:flex-row bg-primary rounded-lg md:shadow-lg">
 					<div className="w-full p-5 hidden md:flex md:flex-col items-center  text-letters-light">
 						<h3 className="text-center leading-8">
