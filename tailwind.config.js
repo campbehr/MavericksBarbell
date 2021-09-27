@@ -31,7 +31,7 @@ module.exports = {
 				3: "auto auto auto",
 			},
 			width: {
-				"1/2": "50%",
+				half: "50%",
 			},
 		},
 		screens: {
