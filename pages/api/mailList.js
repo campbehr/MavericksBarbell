@@ -23,14 +23,9 @@ export default async function handler(req, res) {
 			.then((result) => {
 				res.status(200).send({
 					message:
-						"Your email has been succesfully added to the mailing list. Welcome 👋",
+						"Your email has been succesfully added to the mailing list. Welcome 🏋️‍♀️",
 				});
 			})
-			.catch((err) => {
-				res.status(500).send({
-					message:
-						"Oops, there was a problem with your subscription, please try again or contact us",
-				});
-			});
+			.catch((err) => res.status(500));
 	}
 }

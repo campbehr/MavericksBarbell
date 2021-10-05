@@ -5,9 +5,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
 	const styles = {
 		toastBox:
-			"w-64 md:w-96 h-14 md:h-20 lg mt-20 lg:mt-40 border-2 border-primary flex justify-center items-center bg-secondary rounded-md text-lg md:text-2xl font-medium text-letters ",
-		toastSuccess: "bg-secondary",
-		toastError: "bg-red",
+			"p-5 w-auto sm:w-96 min-h-20  mt-20 md:mt-24 border-4  flex justify-center items-center bg-letters-light rounded-md text-lg md:text-xl font-sans",
+		toastSuccess: "border-secondary text-secondary",
+		toastError: "border-red text-red",
 	};
 
 	const CustomToast = ({ appearance, children }) => (
@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
 			components={{ Toast: CustomToast }}
 			autoDismiss={true}
 			autoDismissTimeout="4000"
-			transitionDuration="500"
 			placement="top-right"
 		>
 			<Layout>

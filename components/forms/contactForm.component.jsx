@@ -32,15 +32,22 @@ const ContactForm = () => {
 					result.status >= 200 &&
 					result.status < 300
 				) {
-					addToast(result.data, {
-						appearance: "success",
-					});
+					addToast(
+						"Thanks for your inquiry. Talk to you soon!",
+						{
+							appearance: "success",
+						}
+					);
 				}
+				console.log(result);
 			});
 		} catch (error) {
-			addToast(error.message, {
-				appearance: "error",
-			});
+			addToast(
+				"Sorry, something appears to have gone wrong. Please try again later.",
+				{
+					appearance: "error",
+				}
+			);
 		}
 	};
 

@@ -26,7 +26,8 @@ export default async (req, res) => {
 		await mail.send(data);
 		res.status(200).json({
 			status: "OK",
-			message: "👍",
+			message:
+				"Thanks for your message, I'll get back to you soon!",
 		});
 	} catch (err) {
 		res.status(500).json({

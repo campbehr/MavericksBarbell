@@ -17,7 +17,7 @@ export default function Workouts({ allPosts: { edges } }) {
 	return (
 		<div>
 			<Head>
-				<title>Workouts page</title>
+				<title>Workouts</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

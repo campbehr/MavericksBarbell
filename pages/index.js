@@ -33,7 +33,7 @@ export default function Home({ allStaticProps }) {
 	return (
 		<>
 			<Head>
-				<title>Hunter Campbell Fitness</title>
+				<title>Maverick's Barbell</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
@@ -159,8 +159,8 @@ export default function Home({ allStaticProps }) {
 					</div>
 				</section>
 				<section className="w-full h-36 sm:h-64 row-start-6 bg-primary flex flex-col justify-center sm:justify-between items-center sm:flex-row rounded-xl">
-					<div className="p-5 sm:w-half">
-						<h4 className="w-full pb-2 sm:pb-5 font-mono font-medium sm:font-bold text-md sm:text-2xl md:pt-2 text-letters-light sm:text-secondary">
+					<div className="md:p-5 sm:w-half">
+						<h4 className="w-full pb-2 sm:pb-5 font-sans md:font-mono font-medium sm:font-bold text-lg sm:text-2xl md:pt-2 text-letters-light sm:text-secondary">
 							Have questions?
 						</h4>
 						<p className="hidden sm:block text-letters-light pb-1 sm:pb-3 text-sm md:text-xl font-sans font-medium">
@@ -173,9 +173,13 @@ export default function Home({ allStaticProps }) {
 						</p>
 					</div>
 					<div className="sm:w-half">
-						<h4 className="p-5 sm:text-center font-mono text-4xl xs:text-5xl sm:text-6xl lg:text-7xl text-secondary ">
-							Contact Me
-						</h4>
+						<Link href="/contact">
+							<a>
+								<h4 className="md:p-5 sm:text-center font-mono text-3xl xs:text-4xl sm:text-5xl  text-secondary ">
+									Contact Me
+								</h4>
+							</a>
+						</Link>
 					</div>
 				</section>
 			</main>

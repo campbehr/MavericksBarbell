@@ -12,7 +12,7 @@ const Footer = () => {
 				</div>
 				<div className="row-start-1 flex flex-col md:items-center space-y-4  text-letters-light  ">
 					<div className="flex flex-col items-center space-y-2 ">
-						<p className="text-3xl md:text-4xl text-secondary text-center font-mono font-medium">
+						<p className="text-3xl md:text-4xl lg:text-5xl text-secondary text-center font-mono font-medium">
 							Sign up for my Newsletter
 						</p>
 						<p className="text-center text-lg text-letters-light ">
