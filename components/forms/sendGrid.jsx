@@ -10,48 +10,28 @@ const MailingList = () => {
 
 	const subscribe = async (event) => {
 		event.preventDefault();
-		try {
-			await axios
-				.put("api/mailList", {
-					mail: mail.current.value,
-				})
-				.then(
-					addToast("Thanks for reaching out!", {
+		recaptchaRef.current.execute();
+		await axios
+			.put("api/mailList", {
+				mail: mail.current.value,
+			})
+			.then((result) => {
+				if (result.status === 200) {
+					addToast(result.data.message, {
 						appearance: "success",
-					})
-				);
-		} catch (error) {
-			addToast(
-				"Oops, there was a problem with your subscription, please try again or contact us.",
-				{
-					appearance: "error",
+					});
 				}
-			);
-		}
+			})
+			.catch((err) => {
+				addToast(
+					"Oops, there was an issue on our end. Please contact us and we will get you subscribed.",
+					{
+						appearance: "error",
+					}
+				);
+			});
 	};
-	// try {
-	// 	const response = await axios.put(
-	// 		"api/mailList",
-	// 		{mail: mail.current.value}
-	// 		)
-	//  .then((response) => {
-	// if (
-	// 	response.status >= 200 &&
-	// 	response.status < 300
-	// ) {
-	// 	addToast(response.data.message, {
-	// 		appearance: "success",
-	// 	});
-	// }
-	// 	})}.catch((err) => {
-	// 		addToast(
-	// 			"Oops, there was a problem with your subscription, please try again or contact us.",
-	// 			{
-	// 				appearance: "error",
-	// 			}
-	// 		);
-	// 	});
-	// };
+
 	return (
 		<div className="w-full">
 			<form

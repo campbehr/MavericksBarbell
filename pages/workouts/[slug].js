@@ -33,7 +33,7 @@ export default function Post({ postData }) {
 	return (
 		<div className="p-5">
 			<Head>
-				<title>{postData.title}</title>
+				<title>Workouts: {postData.title}</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

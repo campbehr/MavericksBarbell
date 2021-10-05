@@ -17,7 +17,7 @@ export default function Articles({ allPosts: { edges } }) {
 	return (
 		<div>
 			<Head>
-				<title>Blog articles page</title>
+				<title>Articles</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
