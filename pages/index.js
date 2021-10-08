@@ -13,7 +13,7 @@ import {
 } from "../lib/wpGraphQL";
 
 const styles = {
-	h2: "w-full  text-center font-mono text-4xl xs:text-5xl sm:text-6xl lg:text-7xl text-letters-dark mb-10 md:mb-16",
+	h2: "w-full  text-center font-mono text-5xl sm:text-6xl lg:text-7xl text-letters-dark mb-10 md:mb-16",
 	blogSection: "w-full row-start-2 flex flex-col ",
 };
 
@@ -80,7 +80,7 @@ export default function Home({ allStaticProps }) {
 						</div>
 					</div>
 				</section>
-				<section className="hidden w-full row-start-3 bg-secondary">
+				<section className="hidden w-full  row-start-3 bg-secondary">
 					NewsLetter Banner
 				</section>
 				<section>
@@ -91,7 +91,7 @@ export default function Home({ allStaticProps }) {
 							</h2>
 						</a>
 					</Link>
-					<div className="w-full h-96 flex flex-col sm:flex-row-reverse row-start-4 bg-primary  rounded-xl">
+					<div className="w-full h-auto sm:h-96 flex flex-col sm:flex-row-reverse row-start-4 bg-primary  rounded-xl">
 						<div className="sm:w-half sm:h-full">
 							<img
 								src="/aboutHomeImg.svg"
@@ -102,13 +102,14 @@ export default function Home({ allStaticProps }) {
 						<div className="p-5 sm:pt-10  sm:w-half sm:h-full">
 							<Link href="/about">
 								<a>
-									<h4 className="w-full pb-2 sm:pb-5 font-mono font-bold text-xl xs:text-2xl md:pt-2 text-secondary">
-										More on Maverick...
-										and me
+									<h4 className="w-full pb-2 sm:pb-5 font-mono font-bold text-2xl md:pt-2 text-secondary">
+										More on Maverick
+										<br className="xs:hidden" />
+										...and me
 									</h4>
 								</a>
 							</Link>
-							<p className="text-letters-light pb-1 sm:pb-3 text-sm md:text-xl font-sans font-medium">
+							<p className="text-letters-light pb-1 sm:pb-3 text-md md:text-xl font-sans font-medium">
 								Aluh-hee-shibah! Lorem ipsum
 								cada bipsum. Ipitty bippity
 								woof cow meow!
@@ -159,8 +160,8 @@ export default function Home({ allStaticProps }) {
 					</div>
 				</section>
 				<section className="w-full h-36 sm:h-64 row-start-6 bg-primary flex flex-col justify-center sm:justify-between items-center sm:flex-row rounded-xl">
-					<div className="md:p-5 sm:w-half">
-						<h4 className="w-full pb-2 sm:pb-5 font-sans md:font-mono font-medium sm:font-bold text-lg sm:text-2xl md:pt-2 text-letters-light sm:text-secondary">
+					<div className="sm:p-5 sm:w-half">
+						<h4 className="w-full pb-2 sm:pb-5 font-sans md:font-mono font-medium sm:font-bold text-lg sm:text-2xl md:text-3xl md:pt-2 text-letters-light sm:text-secondary">
 							Have questions?
 						</h4>
 						<p className="hidden sm:block text-letters-light pb-1 sm:pb-3 text-sm md:text-xl font-sans font-medium">
@@ -175,7 +176,7 @@ export default function Home({ allStaticProps }) {
 					<div className="sm:w-half">
 						<Link href="/contact">
 							<a>
-								<h4 className="md:p-5 sm:text-center font-mono text-3xl xs:text-4xl sm:text-5xl  text-secondary ">
+								<h4 className="md:p-5 sm:text-center font-mono font-bold text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-secondary ">
 									Contact Me
 								</h4>
 							</a>

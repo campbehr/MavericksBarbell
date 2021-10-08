@@ -31,31 +31,21 @@ const Spotlight = ({ props, feat = true }) => {
 						</figure>
 					</div>
 					<div className="flex flex-col space-y-2  sm:w-1/2 sm:pr-2 sm:pl-2  md:w-full md:justify-c">
-						{/* <Link
-						href={`/${
-							props.uri.split("/")[1]
-						}/${props.slug}`}
-					> */}
 						<a className="w-full font-sans font-medium text-xl xs:text-2xl md:pt-2 text-letters-dark">
 							{props.title}
 						</a>
-						{/* </Link> */}
 
 						<p
 							className={`${
 								!feat ? styles.hidden : ""
-							}  text-letters-grey text-sm md:text-xl  `}
+							}  text-letters-grey text-md text-sans  md:text-xl  `}
 						>
 							{
 								props.extraPostInfo
 									.authorExcerpt
 							}
 						</p>
-						{/* <Link
-						href={`/${
-							props.uri.split("/")[1]
-						}/${props.slug}`}
-					> */}
+
 						<p
 							className={`${
 								!feat ? styles.hidden : ""
@@ -63,7 +53,6 @@ const Spotlight = ({ props, feat = true }) => {
 						>
 							Read more{" "}
 						</p>
-						{/* </Link> */}
 					</div>
 				</div>
 			</Link>

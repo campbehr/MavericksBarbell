@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
 import { styles } from "../../styles/pages.styles";
-
-//data
 import { getAllWorkouts } from "../../lib/wpGraphQL";
 
 export default function Workouts({ allPosts: { edges } }) {
