@@ -1,31 +1,37 @@
-import axios from "axios";
-
-export default async function handler(req, res) {
-	if (req.method === "PUT") {
-		await axios
-			.put(
-				process.env.SENDGRID_API_URL,
-				{
+export default async (req, res) => {
+	try {
+		const response = await fetch(
+			process.env.SENDGRID_API_URL,
+			{
+				method: "PUT",
+				headers: {
+					"content-type": "application/json",
+					Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
+				},
+				body: JSON.stringify({
 					contacts: [
 						{ email: `${req.body.mail}` },
 					],
 					list_ids: [
 						process.env.SENDGRID_MAILING_ID,
 					],
-				},
-				{
-					headers: {
-						"content-type": "application/json",
-						Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
-					},
-				}
-			)
-			.then((result) => {
-				res.status(200).send({
+				}),
+			}
+		);
+		if (
+			response.status >= 200 ||
+			response.status < 300
+		) {
+			res.status(200).send({
+				body: {
 					message:
 						"Your email has been succesfully added to the mailing list. Welcome 🏋️‍♀️",
-				});
-			})
-			.catch((err) => res.status(500));
+				},
+			});
+		} else {
+			throw err;
+		}
+	} catch (err) {
+		res.status(500).send();
 	}
-}
+};

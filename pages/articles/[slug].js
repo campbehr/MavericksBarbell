@@ -2,8 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { styles } from "../../styles/pages.styles";
-
-// data
 import {
 	getAllPostsWithSlug,
 	getPost,
@@ -48,7 +46,7 @@ export default function Post({ postData }) {
 						null ? (
 							<></>
 						) : (
-							<div className="w-full flex justify-center bg-secondary shadow-xl ">
+							<div className="w-full h-64 md:h-96 flex justify-center bg-secondary shadow-xl rounded-xl">
 								<img
 									src={
 										postData
@@ -57,6 +55,7 @@ export default function Post({ postData }) {
 											.sourceUrl
 									}
 									alt={postData.title}
+									className="object-cover object-center w-full rounded-xl"
 								/>
 							</div>
 						)}
