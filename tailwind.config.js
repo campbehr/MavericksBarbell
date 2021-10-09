@@ -23,7 +23,8 @@ module.exports = {
 				],
 			},
 			fontSize: {
-				"4xl": "36px",
+				"4xl": "2.25rem",
+				"5xl": "3rem",
 			},
 			gridTemplateColumns: {
 				//Simple 3 column grid
