@@ -22,6 +22,14 @@ module.exports = {
 					...defaultTheme.fontFamily.mono,
 				],
 			},
+			fontSize: {
+				"4xl": [
+					"36px",
+					{
+						lineHeight: "40px",
+					},
+				],
+			},
 			gridTemplateColumns: {
 				//Simple 3 column grid
 				3: "auto minmax(0, 1040px) auto",
