@@ -8,10 +8,6 @@ module.exports = {
 	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
-		fontSize: {
-			"4xl": "2.25rem",
-			"5xl": "3rem",
-		},
 		extend: {
 			backgroundImage: {
 				hero: "url('/heroImg.svg')",
