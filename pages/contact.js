@@ -1,6 +1,10 @@
 import Head from "next/head";
 import ContactForm from "../components/forms/contactForm.component";
-import { styles } from "../styles/pages.styles";
+
+const styles = {
+	pageMain: "p-5 space-y-10 md:space-y-16 h-full",
+	h1: "w-full pt-8 md:pt-5  text-center  text-4xl xs:text-5xl sm:text-6xl lg:text-7xl text-letters-dark font-mono font-semibold",
+};
 
 export default function ContactPage() {
 	return (
