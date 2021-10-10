@@ -161,9 +161,9 @@ export default function Home({ allStaticProps }) {
 				</section>
 				<section className="w-full h-36 sm:h-64 row-start-6 bg-primary flex flex-col justify-center sm:justify-between items-center sm:flex-row rounded-xl">
 					<div className="sm:p-5 sm:w-half">
-						<h4 className="w-full pb-2 sm:pb-5 font-sans md:font-mono font-medium sm:font-bold text-lg sm:text-2xl md:text-3xl md:pt-2 text-letters-light sm:text-secondary">
+						<h5 className="w-full pb-2 sm:pb-5 font-sans md:font-mono font-medium sm:font-bold text-lg sm:text-2xl md:text-3xl md:pt-2 text-letters-light sm:text-secondary">
 							Have questions?
-						</h4>
+						</h5>
 						<p className="hidden sm:block text-letters-light pb-1 sm:pb-3 text-sm md:text-xl font-sans font-medium">
 							Feel free to swing over to my
 							contact form and send me a

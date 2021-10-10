@@ -32,9 +32,9 @@ export default function Articles({ allPosts: { edges } }) {
 							href={`/articles/${node.slug}`}
 							key={node.id}
 						>
-							<div className="flex flex-row-reverse justify-between bg-white h-22 xs:h-28 md:h-40 overflow-hidden shadow-lg hover:shadow-2xl rounded-lg cursor-pointer">
+							<div className="flex flex-row-reverse justify-between bg-white h-24 xs:h-28 md:h-40 overflow-hidden shadow-lg hover:shadow-2xl rounded-lg cursor-pointer">
 								<div>
-									<figure className="h-full sm:h-auto w-24 xs:w-32 sm:w-48 md:w-80">
+									<figure className=" w-24 xs:w-32 sm:w-48 md:w-80">
 										<img
 											src={
 												node
@@ -43,7 +43,7 @@ export default function Articles({ allPosts: { edges } }) {
 													.mediaItemUrl
 											}
 											alt={node.title}
-											className="h-full sm:h-auto"
+											className="h-24 xs:h-28 sm:h-auto"
 										/>
 									</figure>
 								</div>

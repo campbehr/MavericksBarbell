@@ -39,7 +39,7 @@ const blogPostsRssXml = (blogPosts) => {
 		const postDate = Date.parse(post.date);
 
 		// Remember to change this URL to your own!
-		const postHref = `https://huntercampbellfitness.com/blog/${post.slug}`;
+		const postHref = `https://blog.huntercampbellfitness.com/articles/${post.slug}`;
 
 		if (
 			!latestPostDate ||
@@ -72,7 +72,6 @@ const getRssXml = (blogPosts) => {
 	const { rssItemsXml, latestPostDate } =
 		blogPostsRssXml(blogPosts);
 
-	// Edit the '<link>' and '<description>' data here to reflect your own website details!
 	return `<?xml version="1.0" ?>
   <rss
     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -81,10 +80,10 @@ const getRssXml = (blogPosts) => {
     version="2.0"
   >
     <channel>
-        <title><![CDATA[ Health and fitness articles by Hunter Campbell ]]></title>
-        <link>https://huntercampbellfitness.com</link>
+        <title><![CDATA[ Workouts and fitness articles by Hunter Campbell ]]></title>
+        <link>https://blog.huntercampbellfitness.com</link>
         <description>
-          <![CDATA[ This website was built as an outlet for my unique take on health and fitness. If it helps even just one person it's done its job. ]]>
+          <![CDATA[ This website was built as an outlet for my unique take on health and fitness. Hopefully, you'll enjoy it. ]]>
         </description>
         <language>en</language>
         <lastBuildDate>${latestPostDate}</lastBuildDate>
@@ -115,5 +114,4 @@ async function generateRSS() {
 	);
 }
 
-// kick it all off
 generateRSS();
