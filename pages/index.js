@@ -110,13 +110,14 @@ export default function Home({ allStaticProps }) {
 								</a>
 							</Link>
 							<p className="text-letters-light pb-1 sm:pb-3 text-md md:text-xl font-sans font-medium">
-								Aluh-hee-shibah! Lorem ipsum
-								cada bipsum. Ipitty bippity
-								woof cow meow!
-								Aluh-hee-shibah! Lorem ipsum
-								cada bipsum. Ipitty bippity
-								woof cow meow!
-								Aluh-hee-shibah!
+								For the last 5 or so years,
+								I've joked with my wife that
+								my long term plan was to
+								open up a gym with our dog,
+								Maverick. Since that seems a
+								little beyond scope at the
+								moment, I figured a blog was
+								a nice precursor.
 							</p>
 							<Link href="/about">
 								<a>
@@ -165,7 +166,7 @@ export default function Home({ allStaticProps }) {
 							Have questions?
 						</h5>
 						<p className="hidden sm:block text-letters-light pb-1 sm:pb-3 text-sm md:text-xl font-sans font-medium">
-							Feel free to swing over to my
+							Feel free to swing over to the
 							contact form and send me a
 							message. I’ll do my best to
 							answer your questions or at
